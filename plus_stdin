@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# SPDX-FileCopyrightText: 2023 Takeru Soma
+
 import sys
 
  def tonum(s):
