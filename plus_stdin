@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 # SPDX-FileCopyrightText: 2023 Takeru Soma
-
+# SPDX-License-Identifier: BSd-3-Clause
 import sys
-
- def tonum(s):
-
-   try:
+def tonum(s):
+      try:
        return int(s)
-   except:
+      except:
        return float(s)
 
 ans = 0
 for line in sys.stdin:
+    line = line.rstrip()
     ans += tonum(line)
 
 print(ans)
