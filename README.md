@@ -6,8 +6,6 @@
 
 ```
 $ git clone git@github.com:soma4649/robosys2023.git
-
-
 ```
 
 
