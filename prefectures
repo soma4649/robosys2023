@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+#SPDX-FileCopyrightText: 2023 Takeru soma
+#SPDX-License-Indentifier: BSD-3-Clause
+
+def get_capital(prefecture):
+    with open('prefecture_capitals.txt', 'r', encoding='utf-8') as file:
+        capitals = dict(line.strip().split(':') for line in file)
+
+    try:
+        capital = capitals[prefecture]
+        return capital
+    except KeyError:
+        return "該当する県庁所在地が見つかりませんでした"
+
+if __name__ == "__main__":
+    while True:
+        input_prefecture = input("都道府県名を入力してください（終了するには'e'を入力）：")
+
+        if input_prefecture.lower() == 'e':
+            break
+
+        capital = get_capital(input_prefecture)
+
+        print(f"{input_prefecture}の県庁所在地は{capital}です")
+
