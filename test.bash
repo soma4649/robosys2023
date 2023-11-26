@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 # SPDX-FileCopyrightText: 2023 Yoshitaka Hirata
 # SPDX-License-Identifier: BSD-3-clause
 
