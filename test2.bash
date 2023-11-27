@@ -11,12 +11,11 @@ ret=0
 
 out=$(echo 千葉県 | ./prefectures)
 
-[ "${out}" = 都道府県名を入力してください：千葉 ] || ng ${LINENO}
+[ "${out}" = 千葉 ] || ng ${LINENO}
 
-out=$(./prefectures)
-[ "$?" = 0 ]      || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
+out=$(echo 神奈川県 | ./prefectures)
 
+[ "${out}" = 横浜 ] || ng ${LINENO}
 
 ### 間違えた入力　###
 
