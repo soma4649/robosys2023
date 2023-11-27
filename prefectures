@@ -13,8 +13,7 @@ def get_capital(prefecture):
         return "該当する県庁所在地が見つかりませんでした。もう一度ご確認ください。"
 
 if __name__ == "__main__":
-        input_prefecture = input("都道府県名を入力してください：")
-
+        input_prefecture = input("")
         capital = get_capital(input_prefecture)
 
         print(f"{capital}")
