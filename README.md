@@ -31,7 +31,9 @@ $ ./plus < nums
 
 ```
 $ echo 千葉県 | ./prefectures
-都道府県名を入力してください：千葉
+千葉
+```
+```
 $ echo 神奈川県 | ./prefectures
 横浜
 ```
