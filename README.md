@@ -51,7 +51,7 @@ $ git clone git@github.com:soma4649/robosys2023.git
 ```
 $ cd robosys2023
 ```
-３．以下のコードで実行権限を与えてください
+３．以下のコードで実行権限を与えてください。
 ```
 $ chmod +x prefectures
 ```
