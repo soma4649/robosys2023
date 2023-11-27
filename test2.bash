@@ -31,5 +31,24 @@ out=$(echo  | ./prefectures)
 [ "$?" = 0 ]      || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-[ "$ret" = 0 ] && echo OK
+out=$(  | ./prefectures)
+[ "$?" = 127 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(千葉県 | ./prefectures)
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(1 | ./prefectures)
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(./prefectures千葉県)
+[ "$?" = 127 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(./prefectures1)
+[ "$?" = 127 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
 exit $ret
