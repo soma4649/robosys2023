@@ -31,8 +31,8 @@ out=$(echo  | ./prefectures)
 [ "${out}" = "該当する県庁所在地が見つかりませんでした。もう一度ご確認ください。" ] || ng ${LINENO}
 
 out=$(  | ./prefectures)
-[ "$?" = 127 ]      || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "該当する県庁所在地が見つかりませんでした。もう一度ご確認ください。" ] || ng ${LINENO}
 
 out=$(千葉県 | ./prefectures)
 [ "$?" = 1 ]      || ng ${LINENO}
