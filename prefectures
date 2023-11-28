@@ -5,7 +5,7 @@
 def get_capital(prefecture):
 
     with open('prefecture_capitals.txt', 'r',) as file:
-         capitals = dict(line.strip().split(':') for line in file)
+        capitals = dict(line.strip().split(':') for line in file)
 
     try:
         capital = capitals[prefecture]
