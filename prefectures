@@ -3,18 +3,20 @@
 #SPDX-License-Indentifier: BSD-3-Clause
 
 def get_capital(prefecture):
+
     with open('prefecture_capitals.txt', 'r',) as file:
-        capitals = dict(line.strip().split(':') for line in file)
+         capitals = dict(line.strip().split(':') for line in file)
 
     try:
         capital = capitals[prefecture]
         return capital
+
     except KeyError:
         return "該当する県庁所在地が見つかりませんでした。もう一度ご確認ください。"
 
 if __name__ == "__main__":
-        input_prefecture = input("")
-        capital = get_capital(input_prefecture)
+    input_prefecture = input("")
+    capital = get_capital(input_prefecture)
 
-        print(f"{capital}")
+    print(f"{capital}")
 
