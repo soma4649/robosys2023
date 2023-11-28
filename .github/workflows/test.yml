@@ -9,7 +9,7 @@ jobs:
         steps:
         - uses: actions/checkout@v3
         - name: All test
-          run: | 
+          run:  
               bash -xv ./soma.bash
               bash -xv ./test2.bash 
 
